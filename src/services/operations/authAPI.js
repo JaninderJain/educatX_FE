@@ -72,7 +72,8 @@ export function signUp(
         throw new Error(response.data.message)
       }
       toast.success("Signup Successful")
-      navigate("/login")
+      navigate("/login");
+
     } catch (error) {
       console.log("SIGNUP API ERROR............", error)
       toast.error("Signup Failed")
@@ -83,6 +84,7 @@ export function signUp(
   }
 }
 
+//Login
 export function login(email, password, navigate) {
   return async (dispatch) => {
     const toastId = toast.loading("Loading...")

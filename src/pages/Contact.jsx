@@ -19,10 +19,10 @@ const Contact = () => {
           <ContactForm />
         </div>
       </div>
-      <div className="relative mx-auto my-20 flex w-11/12 max-w-maxContent flex-col items-center justify-between gap-8 bg-richblack-900 text-white">
+      <div className="relative mx-auto my-20 flex w-11/12 max-w-maxContent flex-col items-center justify-between gap-8 bg-yellow-700 text-white rounded-xl" style={{border:"1px solid black"}}>
         {/* Reviws from Other Learner */}
-        <h1 className="text-center text-4xl font-semibold mt-8">
-          Reviews from other learners
+        <h1 className="text-center text-4xl font-semibold mt-8 text-richblack-100">
+          Reviews from other <span style={{color:"#FCA407"}}>learners</span>
         </h1>
         <ReviewSlider />
       </div>

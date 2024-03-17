@@ -45,12 +45,12 @@ const ContactUsForm = () => {
 
   return (
     <form
-      className="flex flex-col gap-7"
+      className="flex flex-col gap-7 "
       onSubmit={handleSubmit(submitContactForm)}
     >
       <div className="flex flex-col gap-5 lg:flex-row">
         <div className="flex flex-col gap-2 lg:w-[48%]">
-          <label htmlFor="firstname" className="lable-style">
+          <label htmlFor="firstname" className="lable-style " style={{color:"black"}}>
             First Name
           </label>
           <input
@@ -60,6 +60,7 @@ const ContactUsForm = () => {
             placeholder="Enter first name"
             className="form-style"
             {...register("firstname", { required: true })}
+            style={{color:"black"}}
           />
           {errors.firstname && (
             <span className="-mt-1 text-[12px] text-yellow-100">
@@ -68,7 +69,7 @@ const ContactUsForm = () => {
           )}
         </div>
         <div className="flex flex-col gap-2 lg:w-[48%]">
-          <label htmlFor="lastname" className="lable-style">
+          <label htmlFor="lastname" className="lable-style "style={{color:"black"}}>
             Last Name
           </label>
           <input
@@ -76,14 +77,15 @@ const ContactUsForm = () => {
             name="lastname"
             id="lastname"
             placeholder="Enter last name"
-            className="form-style"
+            className="form-style "
             {...register("lastname")}
+            style={{color:"black"}}
           />
         </div>
       </div>
 
       <div className="flex flex-col gap-2">
-        <label htmlFor="email" className="lable-style">
+        <label htmlFor="email" className="lable-style"style={{color:"black"}}>
           Email Address
         </label>
         <input
@@ -93,6 +95,7 @@ const ContactUsForm = () => {
           placeholder="Enter email address"
           className="form-style"
           {...register("email", { required: true })}
+          style={{color:"black"}}
         />
         {errors.email && (
           <span className="-mt-1 text-[12px] text-yellow-100">
@@ -102,7 +105,7 @@ const ContactUsForm = () => {
       </div>
 
       <div className="flex flex-col gap-2">
-        <label htmlFor="phonenumber" className="lable-style">
+        <label htmlFor="phonenumber" className="lable-style"style={{color:"black"}}>
           Phone Number
         </label>
 
@@ -115,17 +118,18 @@ const ContactUsForm = () => {
               placeholder="Enter first name"
               className="form-style"
               {...register("countrycode", { required: true })}
+              style={{color:"black"}}
             >
               {CountryCode.map((ele, i) => {
                 return (
-                  <option key={i} value={ele.code}>
+                  <option style={{color:"black"}} key={i} value={ele.code}>
                     {ele.code} -{ele.country}
                   </option>
                 )
               })}
             </select>
           </div>
-          <div className="flex w-[calc(100%-90px)] flex-col gap-2">
+          <div className="flex w-[calc(100%-90px)] flex-col gap-2 ">
             <input
               type="number"
               name="phonenumber"
@@ -140,6 +144,7 @@ const ContactUsForm = () => {
                 maxLength: { value: 12, message: "Invalid Phone Number" },
                 minLength: { value: 10, message: "Invalid Phone Number" },
               })}
+              style={{color:"black"}}
             />
           </div>
         </div>
@@ -151,7 +156,7 @@ const ContactUsForm = () => {
       </div>
 
       <div className="flex flex-col gap-2">
-        <label htmlFor="message" className="lable-style">
+        <label htmlFor="message" className="lable-style"style={{color:"black"}}>
           Message
         </label>
         <textarea
@@ -162,6 +167,7 @@ const ContactUsForm = () => {
           placeholder="Enter your message here"
           className="form-style"
           {...register("message", { required: true })}
+          style={{color:"black"}}
         />
         {errors.message && (
           <span className="-mt-1 text-[12px] text-yellow-100">
@@ -173,7 +179,7 @@ const ContactUsForm = () => {
       <button
         disabled={loading}
         type="submit"
-        className={`rounded-md bg-yellow-50 px-6 py-3 text-center text-[13px] font-bold text-black shadow-[2px_2px_0px_0px_rgba(255,255,255,0.18)] 
+        className={`rounded-md bg-yellow-25 px-6 py-3 text-center text-[13px] font-bold text-white shadow-[2px_2px_0px_0px_rgba(255,255,255,0.18)] 
          ${
            !loading &&
            "transition-all duration-200 hover:scale-95 hover:shadow-none"

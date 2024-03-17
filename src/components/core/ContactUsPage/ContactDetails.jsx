@@ -8,14 +8,14 @@ const contactDetails = [
     icon: "HiChatBubbleLeftRight",
     heading: "Chat on us",
     description: "Our friendly team is here to help.",
-    details: "info@studynotion.com",
+    details: "info@educatX.com",
   },
   {
     icon: "BiWorld",
     heading: "Visit us",
     description: "Come and say hello at our office HQ.",
     details:
-      "Akshya Nagar 1st Block 1st Cross, Rammurthy nagar, Bangalore-560016",
+      "Near L.B.S College , New Grain Market Road, Barnala-148101",
   },
   {
     icon: "IoCall",
@@ -37,7 +37,7 @@ const ContactDetails = () => {
           >
             <div className="flex flex-row items-center gap-3">
               <Icon size={25} />
-              <h1 className="text-lg font-semibold text-richblack-5">
+              <h1 className="text-lg font-semibold text-richblack-100">
                 {ele?.heading}
               </h1>
             </div>

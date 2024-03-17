@@ -1,14 +1,14 @@
 import React from 'react'
 import CTAButton from "../../../components/core/HomePage/Button";
 import { FaArrowRight } from "react-icons/fa";
-import Instructor from "../../../assets/Images/Instructor.png";
+import Instructor from "../../../assets/Images/instruct.jpg";
 import HighlightText from './HighlightText';
 
 const InstructorSection = () => {
   return (
-    <div>
-        <div className="flex flex-col lg:flex-row gap-20 items-center">
-          <div className="lg:w-[50%]">
+    <div className='bg-richblack-800'>
+        <div className="flex flex-col lg:flex-row gap-8 items-center">
+          <div className="lg:w-[25rem]" style={{marginRight:"10rem"}}>
             <img
               src={Instructor}
               alt=""
@@ -16,12 +16,12 @@ const InstructorSection = () => {
             />
           </div>
           <div className="lg:w-[50%] flex gap-10 flex-col">
-            <h1 className="lg:w-[50%] text-4xl font-semibold ">
+            <h1 className="lg:w-[50%] text-4xl text-richblack-100 font-semibold ">
               Become an
               <HighlightText text={"instructor"} />
             </h1>
 
-            <p className="font-medium text-[16px] text-justify w-[90%] text-richblack-300">
+            <p className="font-medium text-[16px] text-justify w-[90%] text-richblack-100">
               Instructors from around the world teach millions of students on
               StudyNotion. We provide the tools and skills to teach what you
               love.
@@ -37,6 +37,9 @@ const InstructorSection = () => {
             </div>
           </div>
         </div>
+        <br/>
+        <br/>
+        <br/>
     </div>
   )
 }

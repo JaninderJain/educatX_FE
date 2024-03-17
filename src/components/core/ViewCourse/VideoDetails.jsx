@@ -219,7 +219,8 @@ const VideoDetails = () => {
                   <button
                     disabled={loading}
                     onClick={goToPrevVideo}
-                    className="blackButton"
+                    className="blackButton "
+                    style={{color:"#309151"}}
                   >
                     Prev
                   </button>
@@ -229,6 +230,7 @@ const VideoDetails = () => {
                     disabled={loading}
                     onClick={goToNextVideo}
                     className="blackButton"
+                    style={{color:"#309151"}}
                   >
                     Next
                   </button>

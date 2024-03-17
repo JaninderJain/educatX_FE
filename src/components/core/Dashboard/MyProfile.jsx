@@ -11,7 +11,7 @@ export default function MyProfile() {
 
   return (
     <>
-      <h1 className="mb-14 text-3xl font-medium text-richblack-5">
+      <h1 className="mb-14 text-3xl font-bold text-yellow-25">
         My Profile
       </h1>
       <div className="flex items-center justify-between rounded-md border-[1px] border-richblack-700 bg-richblack-800 p-8 px-12">
@@ -22,7 +22,7 @@ export default function MyProfile() {
             className="aspect-square w-[78px] rounded-full object-cover"
           />
           <div className="space-y-1">
-            <p className="text-lg font-semibold text-richblack-5">
+            <p className="text-lg font-semibold text-richblack-100">
               {user?.firstName + " " + user?.lastName}
             </p>
             <p className="text-sm text-richblack-300">{user?.email}</p>
@@ -39,7 +39,7 @@ export default function MyProfile() {
       </div>
       <div className="my-10 flex flex-col gap-y-10 rounded-md border-[1px] border-richblack-700 bg-richblack-800 p-8 px-12">
         <div className="flex w-full items-center justify-between">
-          <p className="text-lg font-semibold text-richblack-5">About</p>
+          <p className="text-lg font-semibold text-richblack-100">About</p>
           <IconBtn
             text="Edit"
             onclick={() => {
@@ -52,7 +52,7 @@ export default function MyProfile() {
         <p
           className={`${
             user?.additionalDetails?.about
-              ? "text-richblack-5"
+              ? "text-richblack-400"
               : "text-richblack-400"
           } text-sm font-medium`}
         >
@@ -61,7 +61,7 @@ export default function MyProfile() {
       </div>
       <div className="my-10 flex flex-col gap-y-10 rounded-md border-[1px] border-richblack-700 bg-richblack-800 p-8 px-12">
         <div className="flex w-full items-center justify-between">
-          <p className="text-lg font-semibold text-richblack-5">
+          <p className="text-lg font-semibold text-richblack-100">
             Personal Details
           </p>
           <IconBtn
@@ -77,19 +77,19 @@ export default function MyProfile() {
           <div className="flex flex-col gap-y-5">
             <div>
               <p className="mb-2 text-sm text-richblack-600">First Name</p>
-              <p className="text-sm font-medium text-richblack-5">
+              <p className="text-sm font-medium text-richblack-400">
                 {user?.firstName}
               </p>
             </div>
             <div>
               <p className="mb-2 text-sm text-richblack-600">Email</p>
-              <p className="text-sm font-medium text-richblack-5">
+              <p className="text-sm font-medium text-richblack-400">
                 {user?.email}
               </p>
             </div>
             <div>
               <p className="mb-2 text-sm text-richblack-600">Gender</p>
-              <p className="text-sm font-medium text-richblack-5">
+              <p className="text-sm font-medium text-richblack-400">
                 {user?.additionalDetails?.gender ?? "Add Gender"}
               </p>
             </div>
@@ -97,19 +97,19 @@ export default function MyProfile() {
           <div className="flex flex-col gap-y-5">
             <div>
               <p className="mb-2 text-sm text-richblack-600">Last Name</p>
-              <p className="text-sm font-medium text-richblack-5">
+              <p className="text-sm font-medium text-richblack-400">
                 {user?.lastName}
               </p>
             </div>
             <div>
               <p className="mb-2 text-sm text-richblack-600">Phone Number</p>
-              <p className="text-sm font-medium text-richblack-5">
+              <p className="text-sm font-medium text-richblack-400">
                 {user?.additionalDetails?.contactNumber ?? "Add Contact Number"}
               </p>
             </div>
             <div>
               <p className="mb-2 text-sm text-richblack-600">Date Of Birth</p>
-              <p className="text-sm font-medium text-richblack-5">
+              <p className="text-sm font-medium text-richblack-400">
                 {formattedDate(user?.additionalDetails?.dateOfBirth) ??
                   "Add Date Of Birth"}
               </p>

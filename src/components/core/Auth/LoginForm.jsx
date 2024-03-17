@@ -1,7 +1,7 @@
 import { useState } from "react"
 import { AiOutlineEye, AiOutlineEyeInvisible } from "react-icons/ai"
 import { useDispatch } from "react-redux"
-import { Link, useNavigate } from "react-router-dom"
+import {  useNavigate } from "react-router-dom"
 
 import { login } from "../../../services/operations/authAPI"
 
@@ -35,7 +35,7 @@ function LoginForm() {
       className="mt-6 flex w-full flex-col gap-y-4"
     >
       <label className="w-full">
-        <p className="mb-1 text-[0.875rem] leading-[1.375rem] text-richblack-5">
+        <p className="mb-1 text-[0.875rem] leading-[1.375rem] text-richblack-100">
           Email Address <sup className="text-pink-200">*</sup>
         </p>
         <input
@@ -46,10 +46,11 @@ function LoginForm() {
           onChange={handleOnChange}
           placeholder="Enter email address"
           className="form-style w-full"
+          style={{color:"black" , backgroundColor:"white"}}
         />
       </label>
       <label className="relative">
-        <p className="mb-1 text-[0.875rem] leading-[1.375rem] text-richblack-5">
+        <p className="mb-1 text-[0.875rem] leading-[1.375rem] text-richblack-100">
           Password <sup className="text-pink-200">*</sup>
         </p>
         <input
@@ -60,26 +61,25 @@ function LoginForm() {
           onChange={handleOnChange}
           placeholder="Enter Password"
           className="form-style w-full !pr-10"
+          style={{color:"black" , backgroundColor:"white"}}
         />
         <span
           onClick={() => setShowPassword((prev) => !prev)}
           className="absolute right-3 top-[38px] z-[10] cursor-pointer"
         >
           {showPassword ? (
-            <AiOutlineEyeInvisible fontSize={24} fill="#AFB2BF" />
+            <AiOutlineEyeInvisible fontSize={24} fill="#014A32" />
           ) : (
-            <AiOutlineEye fontSize={24} fill="#AFB2BF" />
+            <AiOutlineEye fontSize={24} fill="#014A32" />
           )}
         </span>
-        <Link to="/forgot-password">
-          <p className="mt-1 ml-auto max-w-max text-xs text-blue-100">
-            Forgot Password
-          </p>
-        </Link>
+        <div className="text-right">
+          <a href="/forgot-password" className="text-blue-100 mt-1 text-xs italic "  >forgot Password ?</a>
+        </div>
       </label>
       <button
         type="submit"
-        className="mt-6 rounded-[8px] bg-yellow-50 py-[8px] px-[12px] font-medium text-richblack-900"
+        className="mt-6 rounded-[8px] bg-yellow-25 py-[8px] px-[12px] font-medium text-richblack-900"
       >
         Sign In
       </button>

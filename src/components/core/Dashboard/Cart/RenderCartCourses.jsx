@@ -4,6 +4,7 @@ import ReactStars from "react-rating-stars-component"
 import { useDispatch, useSelector } from "react-redux"
 
 import { removeFromCart } from "../../../../slices/cartSlice"
+import { IconContext } from "react-icons/lib"
 
 export default function RenderCartCourses() {
   const { cart } = useSelector((state) => state.cart)
@@ -24,7 +25,7 @@ export default function RenderCartCourses() {
               className="h-[148px] w-[220px] rounded-lg object-cover"
             />
             <div className="flex flex-col space-y-1">
-              <p className="text-lg font-medium text-richblack-5">
+              <p className="text-lg font-medium text-richblack-100">
                 {course?.courseName}
               </p>
               <p className="text-sm text-richblack-300">
@@ -38,8 +39,8 @@ export default function RenderCartCourses() {
                   size={20}
                   edit={false}
                   activeColor="#ffd700"
-                  emptyIcon={<FaStar />}
-                  fullIcon={<FaStar />}
+                  emptyIcon={<FaStar/>}
+                  fullIcon={<FaStar/>}
                 />
                 <span className="text-richblack-400">
                   {course?.ratingAndReviews?.length} Ratings
@@ -50,7 +51,8 @@ export default function RenderCartCourses() {
           <div className="flex flex-col items-end space-y-2">
             <button
               onClick={() => dispatch(removeFromCart(course._id))}
-              className="flex items-center gap-x-1 rounded-md border border-richblack-600 bg-richblack-700 py-3 px-[12px] text-pink-200"
+              className="flex items-center gap-x-1 rounded-md border border-richblack-600 py-3 px-[12px] text-white"
+              style={{backgroundColor:"#FF1D18"}}
             >
               <RiDeleteBin6Line />
               <span>Remove</span>

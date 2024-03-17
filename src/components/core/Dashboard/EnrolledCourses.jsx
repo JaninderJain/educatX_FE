@@ -34,20 +34,20 @@ export default function EnrolledCourses() {
 
   return (
     <>
-      <div className="text-3xl text-richblack-50">Enrolled Courses</div>
+      <div className="text-3xl text-yellow-25 font-bold">Enrolled Courses</div>
       {!enrolledCourses ? (
         <div className="grid min-h-[calc(100vh-3.5rem)] place-items-center">
           <div className="spinner"></div>
         </div>
       ) : !enrolledCourses.length ? (
-        <p className="grid h-[10vh] w-full place-content-center text-richblack-5">
+        <p className="grid h-[10vh] w-full place-content-center text-richblack-300">
           You have not enrolled in any course yet.
           {/* TODO: Modify this Empty State */}
         </p>
       ) : (
         <div className="my-8 text-richblack-5">
           {/* Headings */}
-          <div className="flex rounded-t-lg bg-richblack-500 ">
+          <div className="flex rounded-t-lg bg-yellow-300 ">
             <p className="w-[45%] px-5 py-3">Course Name</p>
             <p className="w-1/4 px-2 py-3">Duration</p>
             <p className="flex-1 px-2 py-3">Progress</p>
@@ -71,10 +71,10 @@ export default function EnrolledCourses() {
                 <img
                   src={course.thumbnail}
                   alt="course_img"
-                  className="h-14 w-14 rounded-lg object-cover"
+                  className="h-14 w-14 rounded-lg object-cover border border-richblack-700"
                 />
                 <div className="flex max-w-xs flex-col gap-2">
-                  <p className="font-semibold">{course.courseName}</p>
+                  <p className="font-semibold text-richblack-100">{course.courseName}</p>
                   <p className="text-xs text-richblack-300">
                     {course.courseDescription.length > 50
                       ? `${course.courseDescription.slice(0, 50)}...`
@@ -82,8 +82,8 @@ export default function EnrolledCourses() {
                   </p>
                 </div>
               </div>
-              <div className="w-1/4 px-2 py-3">{course?.totalDuration}</div>
-              <div className="flex w-1/5 flex-col gap-2 px-2 py-3">
+              <div className="w-1/4 px-2 py-3 text-richblack-25">{course?.totalDuration}</div>
+              <div className="flex w-1/5 flex-col gap-2 px-2 py-3 text-richblack-25">
                 <p>Progress: {course.progressPercentage || 0}%</p>
                 <ProgressBar
                   completed={course.progressPercentage || 0}
